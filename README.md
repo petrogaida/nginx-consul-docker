@@ -1,5 +1,5 @@
 # nginx-consul-docker
-This demo projects briefly show main capabilities of nginx plus, consul and dockerin Microservices architecture.
+This demo briefly shows main capabilities of nginx plus, consul and docker in Microservices architecture.
 
 ![alt tag](http://s10.postimg.org/qctsvzjkp/nginx_diagram.png)
 
