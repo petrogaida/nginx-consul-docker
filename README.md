@@ -51,10 +51,10 @@ Now you can open your browser and go to:
         - image name should use only alpha/numeric and dash symbols for correct work. 
         - add labels "SERVICE_TAGS: production" (consul registers only services with tag production) 
           and SERVICE_80_NAME : <your microsevice name> (remember this value it will be used in consul).
-3. Go to root folder and open file *consul_watches_config.js*. Add new item to watches collection with **_ your microsevice name _** and *registerderegister.sh* handler. You can write your own handler for specific services.
+3. Go to root folder and open file *consul_watches_config.js*. Add new item to watches collection with **_your microsevice name_** and *registerderegister.sh* handler. You can write your own handler for specific services.
 4. Go to *./nginx folder*. Open *app.conf* and add a new upstream with **_your microsevice name_** 
     notes: upstream name must be the same as your SERVICE_80_Name, mapping is using those fields.
-5. Go to *./nginx/services folder*. and create a new file with a routes for new added microservices.
+5. Go to *./nginx/services folder*. and create a new file with routes for new added microservices.
 6. Restart nginx plus and consul container.
 
 
