@@ -12,9 +12,9 @@ Used components:
 #### *Installation:*
 ##### Prerequisites and Required Software:
 
-- [docker](https://www.docker.com/products/docker).
-- [docker-compose](https://docs.docker.com/compose/install/).
-- [jq](https://stedolan.github.io/jq/).
+- [docker](https://www.docker.com/products/docker)
+- [docker-compose](https://docs.docker.com/compose/install/)
+- [jq](https://stedolan.github.io/jq/)
 
 **Steps to run:**
 
@@ -27,7 +27,7 @@ Type `$ docker ps`
 
 ![alt tag](http://s9.postimg.org/lt55l4ai7/tttt.png)
 
-When your nginx plus, consul and registrator instances run, You can start running microservices. When you start or stop microservice container, registrator picks this changes and sends it to the Consul, which based on his configuration file will call proper handler (bash file). In this case it will use simple nginx plus api to register or deregister microservice instances. Steps to run a demo are below:
+When your nginx plus, consul and registrator instances run, you can start running microservices. When you start or stop microservice container, registrator picks this changes and sends it to the Consul, which based on his configuration file will call proper handler (bash file). In this case it will use simple nginx plus api to register or deregister microservice instances. Steps to run a demo are below:
 
 1. go to folder *./microservices*.
 2. type  `$ docker-compose -f http-service.yml scale http=3`, to run 3 instances of simple microservice.
@@ -51,8 +51,8 @@ Now you can open your browser and go to:
         - image name should use only alpha/numeric and dash symbols for correct work. 
         - add labels "SERVICE_TAGS: production" (consul registers only services with tag production) 
           and SERVICE_80_NAME : <your microsevice name> (remember this value it will be used in consul).
-3. Go to root folder and open file *consu_watches_config.js*. Add new item to watches collection with **_<your microsevice name>_** and *registerderegister.sh* handler. You can write your own handler for specific services.
-4. Go to *./nginx folder*. Open *app.conf* and add a new upstream with **_<your microsevice name>_** 
+3. Go to root folder and open file *consul_watches_config.js*. Add new item to watches collection with **_ <your microsevice name> _** and *registerderegister.sh* handler. You can write your own handler for specific services.
+4. Go to *./nginx folder*. Open *app.conf* and add a new upstream with **_ <your microsevice name> _** 
     notes: upstream name must be the same as your SERVICE_80_Name, mapping is using those fields.
 5. Go to *./nginx/services folder*. and create a new file with a routes for new added microservices.
 6. Restart nginx plus and consul container.
