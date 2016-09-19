@@ -27,7 +27,7 @@ Type `$ docker ps`
 
 ![alt tag](http://s9.postimg.org/lt55l4ai7/tttt.png)
 
-When your nginx plus, consul and registrator instances run. You can start running microservices. When you start or stop microservice container, registrator picks this changes and send it to Consul, which based on his configuration file will call proper handler (bash file). In this case it will use simple nginx plus api to register or deregister microservice instances. Steps to run a demo are below:
+When your nginx plus, consul and registrator instances run, You can start running microservices. When you start or stop microservice container, registrator picks this changes and sends it to the Consul, which based on his configuration file will call proper handler (bash file). In this case it will use simple nginx plus api to register or deregister microservice instances. Steps to run a demo are below:
 
 1. go to folder *./microservices*.
 2. type  `$ docker-compose -f http-service.yml scale http=3`, to run 3 instances of simple microservice.
