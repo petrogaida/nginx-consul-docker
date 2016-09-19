@@ -55,6 +55,6 @@ Now you can open your browser and go to:
 4. Go to *./nginx folder*. Open *app.conf* and add a new upstream with **_your microsevice name_** 
     notes: upstream name must be the same as your SERVICE_80_Name, mapping is using those fields.
 5. Go to *./nginx/services folder* and create a new file with routes for new added microservices.
-6. Restart nginx plus and consul container.
+6. Restart nginx plus and consul containers.
 
 
