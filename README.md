@@ -12,14 +12,14 @@ Used components:
 #### *Installation:*
 ##### Prerequisites and Required Software:
 
-- [docker](https://www.docker.com/products/docker)
-- [docker-compose](https://docs.docker.com/compose/install/)
-- [jq](https://stedolan.github.io/jq/)
+- [docker](https://www.docker.com/products/docker).
+- [docker-compose](https://docs.docker.com/compose/install/).
+- [jq](https://stedolan.github.io/jq/).
 
 **Steps to run:**
 
-1. `$ git clone https://github.com/petrogaida/nginx-consul-docker`
-2. Copy *nginx-repo.key* and *nginx-repo.crt* files for your account to *~/nginx* folder (those files are already there, but they need to be replaced with new one, because current could be expired)
+1. `$ git clone https://github.com/petrogaida/nginx-consul-docker`.
+2. Copy *nginx-repo.key* and *nginx-repo.crt* files for your account to *~/nginx* folder (those files are already there, but they need to be replaced with new one, because current could be expired).
 3. run `$ ./start.sh` to get all docker images and start them. Script will ask you to enter *$HOST_IP* - this is your docker host IP (for Ubuntu it is 172.17.0.1), for Windows type `$ docker-machine ip default` to get IP of your host. 
 
 #### *Demo*
@@ -35,10 +35,11 @@ When your nginx plus, consul and registrator instances run, You can start runnin
 4. type  `$ docker-compose -f hellouniverse.yml scale hellouniverse=2`, to run 2 instances of another microservice.
 
 Now you can open your browser and go to:
+
 1. *http://HOST_IP:8080/* - nginx plus dashboard page. Here you can monitor your microservices instances.
 2. *http://HOST_IP:8500/* - consul dashboard.
-3. *http://HOST_IP:80/endpoint1* - returns "Hello World" by calling helloworld microservice
-4. *http://HOST_IP:80/endpoint2* - returns "Hello Universe" by calling hellouniverse microservice
+3. *http://HOST_IP:80/endpoint1* - returns "Hello World" by calling helloworld microservice.
+4. *http://HOST_IP:80/endpoint2* - returns "Hello Universe" by calling hellouniverse microservice.
 5. *http://HOST_IP:80/loadbalance* - opens page with details about server on which microservice is run currently. You can check "Auto refresh" and monitor nginx plus dashboard how it balances between nodes.
 
 #### *How to add a new microservice to nginx plus*
