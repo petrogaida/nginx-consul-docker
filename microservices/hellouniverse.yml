@@ -1,0 +1,7 @@
+hellouniverse:
+  image: petrogaida/hellouniverse:latest
+  labels:
+    SERVICE_TAGS: production
+    SERVICE_80_NAME: hellouniverse
+  ports:
+  - "5000"

@@ -1,0 +1,22 @@
+{
+  "node_name": "consul",
+  "server": true,
+  "log_level": "DEBUG",
+  "watches": [
+    {
+      "type": "service",
+      "service": "hellouniverse",
+      "handler": "/tmp/registerderegister.sh"
+    },
+    {
+      "type": "service",
+      "service": "helloworld",
+      "handler": "/tmp/registerderegister.sh"
+    },
+    {
+      "type": "service",
+      "service": "http",
+      "handler": "/tmp/registerderegister.sh"
+    }
+  ]
+}
