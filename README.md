@@ -17,6 +17,7 @@ Used components:
 - [jq](https://stedolan.github.io/jq/)
 
 **Steps to run:**
+
 1. `$ git clone https://github.com/petrogaida/nginx-consul-docker`
 2. Copy *nginx-repo.key* and *nginx-repo.crt* files for your account to *~/nginx* folder (those files are already there, but they need to be replaced with new one, because current could be expired)
 3. run `$ ./start.sh` to get all docker images and start them. Script will ask you to enter *$HOST_IP* - this is your docker host IP (for Ubuntu it is 172.17.0.1), for Windows type `$ docker-machine ip default` to get IP of your host. 
