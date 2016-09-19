@@ -54,7 +54,7 @@ Now you can open your browser and go to:
 3. Go to root folder and open file *consul_watches_config.js*. Add new item to watches collection with **_your microsevice name_** and *registerderegister.sh* handler. You can write your own handler for specific services.
 4. Go to *./nginx folder*. Open *app.conf* and add a new upstream with **_your microsevice name_** 
     notes: upstream name must be the same as your SERVICE_80_Name, mapping is using those fields.
-5. Go to *./nginx/services folder*. and create a new file with routes for new added microservices.
+5. Go to *./nginx/services folder* and create a new file with routes for new added microservices.
 6. Restart nginx plus and consul container.
 
 
