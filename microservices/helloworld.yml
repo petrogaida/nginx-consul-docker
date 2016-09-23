@@ -2,6 +2,6 @@ helloworld:
   image: petrogaida/helloworld:latest
   labels:
     SERVICE_TAGS: production
-    SERVICE_80_NAME: helloworld
+    SERVICE_NAME: helloworld
   ports:
   - "5000"
